@@ -577,6 +577,9 @@ ul {
   height: 20px;
   width: 20px;
   fill: var(--logo-color);
+  transition-property: fill;
+  transition-duration: var(--time);
+  transition-timing-function: var(--cub);
 
 }
 .wite{
@@ -850,8 +853,8 @@ section {
   cursor: pointer;
 
   transition-property: background, color, box-shadow;
-  transition-duration: var(--time), var(--time), var(--time);
-  transition-timing-function: var(--cub), var(--cub), var(--cub);
+  transition-duration: var(--time);
+  transition-timing-function: var(--cub);
 
 }
 /* bacground box-shadow */
