@@ -26,6 +26,7 @@
 }
 .no-scroll{
   overflow: hidden;
+
 }
 
 .container {
@@ -226,7 +227,9 @@ ul {
   max-width: 1600px;
   margin: 0 auto;
   
-  background-image:
+  background-image: linear-gradient(to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)),
    url(../images/background-img.jpg); 
   background-repeat: no-repeat;
   background-position: center;
@@ -243,7 +246,7 @@ ul {
   width: 100%;
   height: 100%;
   
-  background-color: rgba(47, 48, 58, 0.4);
+ 
 
   pointer-events: none;   /*  уточнити */
 
@@ -278,12 +281,15 @@ ul {
   border-style: inherit;
   background-color: var(--blue);
   color: var(--background-main);
+
+
 }
 
 /*------------------------------------------------------------*/
 /* Выпадающее окно */
 
 .backdrop{
+
   position: fixed;
   height: 100%;
   width: 100%;
@@ -293,6 +299,7 @@ ul {
   background-color: rgba(0, 0, 0, 0.2); 
   
   z-index: 3;
+ 
 
   transition-property: opacity;
   transition-duration: var(--time);
@@ -322,6 +329,7 @@ ul {
 
   background-color: var(--background-main);
   opacity: 1;
+  visibility: visible; 
 
 }
 
@@ -339,6 +347,11 @@ ul {
 
   cursor: pointer;
 
+}
+.modal-btn{
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
 
@@ -585,6 +598,10 @@ ul {
   border: var(--logo-color) 1px solid;
   border-radius: 4px;
 
+  transition-property: border ;
+  transition-duration: var(--time);
+  transition-timing-function: var(--cub);
+
 }
 .partner-size{
   height: 60px;
@@ -762,13 +779,17 @@ section {
   top: 0%;
 }
 
+.portfolio-focus:focus .drop-window {
+  top: 0%;
+}
+
+
 
 .portfolio-title {
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 24px;
-  padding-right: 24px;
-  
+  padding-right: 24px; 
 
   background: #ffffff;
   border-left: 1px solid #eeeeee;
@@ -814,6 +835,7 @@ section {
   padding: 6px 22px;
   margin-top: 0;
   border-radius: 4px;
+  
 
   font-family: "Roboto";
   font-weight: 500;
@@ -821,16 +843,18 @@ section {
   line-height: 1.6;
   text-align: center;
   letter-spacing: 0.03em;
-
+  color: var(--text-color);
   background: var(--team-color);
+  box-shadow: 0 0 0;
 
   cursor: pointer;
 
-  transition-property: color bacground box-shadow;
-  transition-duration: var(--time);
-  transition-timing-function: var(--cub);
-}
+  transition-property: background, color, box-shadow;
+  transition-duration: var(--time), var(--time), var(--time);
+  transition-timing-function: var(--cub), var(--cub), var(--cub);
 
+}
+/* bacground box-shadow */
 .portfolio-focus{
   transition-property: box-shadow;
   transition-duration: var(--time);
