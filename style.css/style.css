@@ -233,7 +233,6 @@ ul {
    url(../images/background-img.jpg); 
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain ;
   background-color: var(--background-hero);
 
   text-align: center;
@@ -311,6 +310,7 @@ ul {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  visibility: visible;
 
 }
 
